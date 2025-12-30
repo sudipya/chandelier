@@ -1,34 +1,11 @@
-# 🏨 Hostel Management System
+# Hostel-Management-System
+###University java project -2nd year 
 
-A **Java-based desktop application** for managing hostel operations including student registration, 
-room allocation, and payment tracking. Built using **JFrame**, **NetBeans IDE**, and **MySQL** for data storage.
+We have got hostel for girls who are studied at our university. Hostel premises is only allowed to only girls and staff members. Hostel management system is designed for save records of room members, admins and rooms. And also it contains special features like how many students are in a room, student's id and also available rooms in ac or non-ac. The admin can check all the details about this application like only registered admins can login into this and they save records of rooms and other things  and also foods are ordering by admins for the room members as they like. Administrators have the ability to add rooms and add room members for this system. These are the main processes of our system.
 
----
-
-## 📌 Features
-- Student registration and management
-- Room allocation and availability tracking
-- Payment record management
-- Search and reporting functionality
-- User-friendly and simple interface
-
----
-
-## 🛠 Technologies Used
-- **Programming Language:** Java  
-- **GUI Framework:** JFrame  
-- **Database:** MySQL  
-- **IDE:** NetBeans  
-
----
-
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sudipya/chandelier.git
-2. Open the project in NetBeans IDE.
-
-3. Set up the MySQL database as per the project configuration.
-
-4. Build and run the project.
-
+We have developed this hostel management system using java language. This system well helped to maintains and manage student details, room reservation, food ordering, check in-check out details of room members and also payments. There are a lot of benefits of this system are ,
+  -it reduces the manual work of management.
+  -it secures the data of the room members.
+  -it is very easy to handle by admin.
+  
+So we think this system will help for our hostel to save records efficiency.
