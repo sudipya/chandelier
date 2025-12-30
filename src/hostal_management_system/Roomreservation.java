@@ -325,7 +325,7 @@ public class Roomreservation extends javax.swing.JFrame {
         
         try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT * FROM rooms ;"; 
@@ -421,7 +421,7 @@ public class Roomreservation extends javax.swing.JFrame {
        
        try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             
@@ -496,7 +496,7 @@ public class Roomreservation extends javax.swing.JFrame {
         System.out.println(roomnumberr);  
        try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
            
             String query1 ="DELETE FROM reservation WHERE room_id="+roomnumberr+";";

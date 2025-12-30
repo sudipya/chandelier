@@ -165,7 +165,7 @@ public class Payments extends javax.swing.JFrame {
         
         try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             

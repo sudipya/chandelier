@@ -273,7 +273,7 @@ public class AdminReg extends javax.swing.JFrame {
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         // TODO add your handling code here:
          try {
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="INSERT INTO `admin`(`fname`, `lname`, `id`, `uname`, `password`, `email`)"+" VALUES (?,?,?,?,?,?)";

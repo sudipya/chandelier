@@ -278,7 +278,7 @@ public class OrderFood extends javax.swing.JFrame {
     
     try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT moneyPaid FROM student WHERE id="+id+";"; 
@@ -347,7 +347,7 @@ public class OrderFood extends javax.swing.JFrame {
     if(newww>0){
     try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query1 ="update student set moneyPaid = '"+newww+"' where id = "+id+""; 

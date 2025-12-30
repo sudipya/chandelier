@@ -55,7 +55,7 @@ public class getpay {
                 
        try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             String query1 ="update student set paidOrNot = 1 where id = "+studentId+"; ";
             String query2 ="update student set moneyPaid ="+balance+" where id = "+studentId+"; ";
@@ -91,7 +91,7 @@ public class getpay {
      
       try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
            
                     
@@ -142,7 +142,7 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT moneyPaid FROM student WHERE id="+studentid1+";"; 
@@ -182,7 +182,7 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT paidOrNot FROM student WHERE id="+studentid1+";"; 
@@ -227,7 +227,7 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT price FROM pricelist WHERE itemname="+itemname1+" "; 
@@ -270,7 +270,7 @@ public class getpay {
    
        try {
             
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
            
             String query1 ="update pricelist set price ="+breakfast+" where itemname = 001; ";

@@ -181,7 +181,7 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please Enter Your Password!");
         } else {
          try{
-             String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+             String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
              java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
              String query ="SELECT * FROM `admin` WHERE uname=? and password=?";
              

@@ -153,7 +153,7 @@ public class Passing extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
                 try {
-            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            String myUrl = "jdbc:h2:mem:hostel;MODE=MySQL;DB_CLOSE_DELAY=-1";
             java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             Student s = new Student();
             String query ="INSERT INTO `passing`( `Student_ID`, `Status`, `Time`)"+" VALUES (?,?,?)";
