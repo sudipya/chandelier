@@ -55,8 +55,8 @@ public class getpay {
                 
        try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             String query1 ="update student set paidOrNot = 1 where id = "+studentId+"; ";
             String query2 ="update student set moneyPaid ="+balance+" where id = "+studentId+"; ";
                     // execute the query, and get a java result set
@@ -91,8 +91,8 @@ public class getpay {
      
       try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
            
                     
                 String query ="SELECT type FROM rooms where room_id IN (SELECT room_id FROM reservation where student_id="+studentid1+");";
@@ -142,8 +142,8 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT moneyPaid FROM student WHERE id="+studentid1+";"; 
             
@@ -182,8 +182,8 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT paidOrNot FROM student WHERE id="+studentid1+";"; 
             
@@ -227,8 +227,8 @@ public class getpay {
       
     try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT price FROM pricelist WHERE itemname="+itemname1+" "; 
             
@@ -270,8 +270,8 @@ public class getpay {
    
        try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
            
             String query1 ="update pricelist set price ="+breakfast+" where itemname = 001; ";
             String query2 ="update pricelist set price ="+lunch+" where itemname = 003; ";

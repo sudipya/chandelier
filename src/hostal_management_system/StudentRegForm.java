@@ -186,8 +186,8 @@ public class StudentRegForm extends javax.swing.JFrame {
 
     private void btnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegActionPerformed
        /* try {
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="INSERT INTO `student`(`id`, `name`, `tel`, `faculty`, `paidOrNot`)"+" VALUES (?,?,?,?,0)";
             

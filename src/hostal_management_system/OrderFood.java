@@ -278,8 +278,8 @@ public class OrderFood extends javax.swing.JFrame {
     
     try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query ="SELECT moneyPaid FROM student WHERE id="+id+";"; 
             
@@ -347,8 +347,8 @@ public class OrderFood extends javax.swing.JFrame {
     if(newww>0){
     try {
             
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
             
             String query1 ="update student set moneyPaid = '"+newww+"' where id = "+id+""; 
             String query2 ="INSERT INTO orderinfo (student_id,payment,breakfast,lunch,dinner,tea) VALUES ("+id+","+tott+","+b+","+l+","+d+","+m+")";
@@ -443,9 +443,9 @@ public class OrderFood extends javax.swing.JFrame {
     {
       // create our mysql database connection
       String myDriver = "org.gjt.mm.mysql.Driver";
-      String myUrl = "jdbc:mysql://localhost/test";
+      String myUrl = "jdbc:h2:./data/test;MODE=MySQL";
       Class.forName(myDriver);
-      Connection conn = DriverManager.getConnection(myUrl, "root", "");
+      Connection conn = DriverManager.getConnection(myUrl, "sa", "");
       
       // our SQL SELECT query. 
       // if you only need a few columns, specify them by name instead of using "*"

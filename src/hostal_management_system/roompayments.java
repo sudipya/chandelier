@@ -196,8 +196,8 @@ public class roompayments extends javax.swing.JFrame {
 
         try {
 
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
 
             try ( //first we change paidOrNot to 0 ,cause this is a new month and we need to get payments from all
                 Statement st = conn.createStatement()) {
@@ -331,8 +331,8 @@ public class roompayments extends javax.swing.JFrame {
 
      try {
 
-            String myUrl = "jdbc:mysql://localhost/hostel";
-            java.sql.Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            String myUrl = "jdbc:h2:./data/hostel;MODE=MySQL";
+            java.sql.Connection conn = DriverManager.getConnection(myUrl, "sa", "");
 
             String query ="SELECT * FROM student where paidOrNot=0;";
 

@@ -53,17 +53,22 @@ public class AbsoluteLayout implements LayoutManager2 {
         int maxH = 0;
         for (Component c : parent.getComponents()) {
             AbsoluteConstraints ac = constraints.get(c);
-            java.awt.Dimension ps = c.getPreferredSize();
             if (ac != null) {
-                int w = ac.width <= 0 ? ps.width : ac.width;
-                int h = ac.height <= 0 ? ps.height : ac.height;
+                int w = ac.width <= 0 ? (c.getBounds().width > 0 ? c.getBounds().width : 0) : ac.width;
+                int h = ac.height <= 0 ? (c.getBounds().height > 0 ? c.getBounds().height : 0) : ac.height;
                 maxW = Math.max(maxW, ac.x + w);
                 maxH = Math.max(maxH, ac.y + h);
             } else {
-                maxW = Math.max(maxW, ps.width);
-                maxH = Math.max(maxH, ps.height);
+                // If no constraint, use current bounds (avoid calling getPreferredSize to prevent recursion)
+                int w = c.getBounds().width > 0 ? c.getBounds().width : 0;
+                int h = c.getBounds().height > 0 ? c.getBounds().height : 0;
+                maxW = Math.max(maxW, w);
+                maxH = Math.max(maxH, h);
             }
         }
+        // Provide a safe minimum size to avoid zero-size windows
+        if (maxW == 0) maxW = 400;
+        if (maxH == 0) maxH = 300;
         return new Dimension(maxW, maxH);
     }
 
@@ -73,17 +78,20 @@ public class AbsoluteLayout implements LayoutManager2 {
         int maxH = 0;
         for (Component c : parent.getComponents()) {
             AbsoluteConstraints ac = constraints.get(c);
-            java.awt.Dimension ms = c.getMinimumSize();
             if (ac != null) {
-                int w = ac.width <= 0 ? ms.width : ac.width;
-                int h = ac.height <= 0 ? ms.height : ac.height;
+                int w = ac.width <= 0 ? (c.getBounds().width > 0 ? c.getBounds().width : 0) : ac.width;
+                int h = ac.height <= 0 ? (c.getBounds().height > 0 ? c.getBounds().height : 0) : ac.height;
                 maxW = Math.max(maxW, ac.x + w);
                 maxH = Math.max(maxH, ac.y + h);
             } else {
-                maxW = Math.max(maxW, ms.width);
-                maxH = Math.max(maxH, ms.height);
+                int w = c.getBounds().width > 0 ? c.getBounds().width : 0;
+                int h = c.getBounds().height > 0 ? c.getBounds().height : 0;
+                maxW = Math.max(maxW, w);
+                maxH = Math.max(maxH, h);
             }
         }
+        if (maxW == 0) maxW = 200;
+        if (maxH == 0) maxH = 150;
         return new Dimension(maxW, maxH);
     }
 
