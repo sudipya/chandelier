@@ -1,53 +1,34 @@
+# 🏨 Hostel Management System
 
+A **Java-based desktop application** for managing hostel operations including student registration, 
+room allocation, and payment tracking. Built using **JFrame**, **NetBeans IDE**, and **MySQL** for data storage.
 
-## Project info
+---
 
-A java based desktop application for managing hostel operations such as room allocation, student registration, and payment tracking
+## 📌 Features
+- Student registration and management
+- Room allocation and availability tracking
+- Payment record management
+- Search and reporting functionality
+- User-friendly and simple interface
 
-## How can I edit this code?
+---
 
-**Use your preferred IDE**
+## 🛠 Technologies Used
+- **Programming Language:** Java  
+- **GUI Framework:** JFrame  
+- **Database:** MySQL  
+- **IDE:** NetBeans  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sudipya/chandelier.git
+2. Open the project in NetBeans IDE.
 
-Follow these steps:
+3. Set up the MySQL database as per the project configuration.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. Build and run the project.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
